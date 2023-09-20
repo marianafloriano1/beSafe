@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="beSafe.Views.ItemsPage"
+             Title="SOS"
+             xmlns:local="clr-namespace:beSafe.ViewModels"  
+             xmlns:model="clr-namespace:beSafe.Models"  
+             x:Name="BrowseItemsPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#ebadfa</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical"  Padding="10,25,10,15">
+
+
+                <Grid HorizontalOptions="Center" >
+                   
+                    <Button Text="Emergência" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" BackgroundColor="#E49E9E" CornerRadius="20" TextColor="#565656" FontAttributes="None" WidthRequest="180" Clicked="btn_sos" />
+
+                </Grid>
+
+                
+
+                <Grid>
+                    <Image Source="img_dois.png" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="560"></Image>
+                </Grid>
+                <StackLayout>
+                <Entry x:Name="NumeroTelefoneEntry" Placeholder="insira o numero aqui"></Entry>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

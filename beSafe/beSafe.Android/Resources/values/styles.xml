@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+
+  
+<color name="custom_back_arrow_color">#FF0000</color>
+
+  <style name="MainTheme" parent="MainTheme.Base">
+
+  </style>
+</resources>

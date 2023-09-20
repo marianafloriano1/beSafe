@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="beSafe.Views.Enquete"
+             xmlns:vm="clr-namespace:beSafe.ViewModels"
+             Title="Enquete">
+
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#ebadfa</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical"  Padding="10,15,10,5">
+                <Grid HorizontalOptions="Center" >
+                    <Button Text="Desabafe" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" BackgroundColor="#add8f6" CornerRadius="20" TextColor="#565656" WidthRequest="120" FontAttributes="Bold" Clicked ="btn_desabafo" />
+
+
+                    <Grid HorizontalOptions="Center" >
+                        <Button  Text="Enquete" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="#add8f6" CornerRadius="20" TextColor="#565656"  WidthRequest="120" FontAttributes="Bold"  Clicked ="btn_enquetee"/>
+
+                    </Grid>
+
+                </Grid>
+                <Image Source="img_enquete.png" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" ></Image>
+                
+            </StackLayout>
+           
+        </ScrollView>
+    </Grid>
+
+</ContentPage>

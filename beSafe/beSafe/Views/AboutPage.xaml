@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="beSafe.Views.AboutPage"
+             xmlns:vm="clr-namespace:beSafe.ViewModels"
+             Title="beSafe">
+
+    <ContentPage.BindingContext>
+        <vm:AboutViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#ebadfa</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.IconImageSource>
+        <OnPlatform x:TypeArguments="ImageSource">
+            <On Platform="iOS" Value="o.png" />
+            <On Platform="Android" Value="o.png" />
+        </OnPlatform>
+    </ContentPage.IconImageSource>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ScrollView Grid.Row="1">
+            <StackLayout Orientation="Vertical"  Padding="10,15,10,5">
+                <Grid HorizontalOptions="Center" >
+                    <Button Text="Desabafe" HorizontalOptions="Start" VerticalOptions="CenterAndExpand" BackgroundColor="#add8f6" CornerRadius="20" TextColor="#565656" WidthRequest="120" FontAttributes="Bold"  Clicked ="btn_desabafo"/>
+
+
+                    <Grid HorizontalOptions="Center" >
+                        <Button  Text="Enquete" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="#add8f6" CornerRadius="20" TextColor="#565656"  WidthRequest="120" FontAttributes="Bold"  Clicked ="btn_enquete"/>
+
+                    </Grid>
+                </Grid>
+                <Grid>
+                    <Image Source="img_chat.png" Aspect="AspectFill" IsOpaque="True" ></Image>
+                    <Grid Padding="0,105,0,105" >
+                        <ImageButton CornerRadius="10" Source="escreva.png" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"  BackgroundColor="#ffffff" WidthRequest="45" Clicked="tetas"></ImageButton>
+
+                    </Grid>
+                </Grid>
+
+
+
+            </StackLayout>
+
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
